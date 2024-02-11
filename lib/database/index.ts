@@ -13,7 +13,7 @@ export const connectToDatabase = async () => {
     dbName: 'urbond',
     bufferCommands: false,
   })
-
+console.log("connected to database")
   cached.conn = await cached.promise;
 
   return cached.conn;
