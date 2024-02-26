@@ -1,3 +1,4 @@
+
 import { Webhook } from 'svix'
 import { headers } from 'next/headers'
 import { WebhookEvent } from '@clerk/nextjs/server'
@@ -64,6 +65,7 @@ export async function POST(req: Request) {
       firstName: first_name,
       lastName: last_name,
       photo: image_url,
+      isAdmin: false,
     }
 
     const newUser = await createUser(user);
@@ -104,3 +106,4 @@ export async function POST(req: Request) {
  
   return new Response('', { status: 200 })
 }
+ 

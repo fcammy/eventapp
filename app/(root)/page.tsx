@@ -1,7 +1,9 @@
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import Image from "next/image";
+import { connectToDatabase } from "@/lib/database";
 
+connectToDatabase();
 export default function Home() {
   return (
     <>
